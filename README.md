@@ -17,7 +17,7 @@ Spring Boot REST API to demonstrate movie data handling using CRUD functions. Th
 * **API Gateway & WAF** - API gateway can be used to provide such as rate-limitting or gateway layer policies to protect the API. WAF should also be included to filter API request and prevent DDoS.
 * **Backup data** - All the resources can be backup using S3 in case of disaster recovery.
 
-## Deployment
+## Implementation
 
 ### Project Structure
 
@@ -45,7 +45,7 @@ kubectl apply -f service.yaml
 kubectl port-forward deployment/movie 8080:8080
 ```
 
-## Test API
+## API Solution
 ```shell
 # GET /movie/count
 # return the number of entry in database
