@@ -1,10 +1,14 @@
 # movie data query Spring Boot API
+Spring Boot REST API to demonstrate movie data handling using CRUD functions. The application is contianerised with Docker and can be deployed to Kubernetes.
 
 ## Constraints and Improvements
 
-* **Response Time** - API response time was not extensively tested due to development environment and budget constraint. The response time can be further improved by using better performance database instance, caching and in-memory data, improve network with cloudfront or distribution close to API consumer, rate limiting and API policy to prevent abuse usage.
-* **Auth** - 
-* **Auth** - 
+* **Response time** - API response time was not extensively tested due to development environment and budget constraint. The response time can be further improved by using better performance database instance, caching and in-memory data, improve network with cloudfront or distribution close to API consumer, rate limiting and API policy to prevent abuse usage.
+* **Secret Manager** - Secret Manager should be used to store database credentials and any key used for authentication. However, not implemented in this demo.
+* **API Auth** - AWS Cognito or custom API authntication header and tokens should be use to fine grain authorization of API journey and user access.
+* **API error handling and logging** - Error handling and logging in API source code is not done extensively due to time constraint.
+* **Test cases** - API test cases are not properly developped due to time constraint.
+* **** - Cog
 * **Auth** - Cognito provides JSON Web Tokens (JWT) and along with AppSync fine-grained authorization on what data types users can access.
 
 ## AWS Services
@@ -14,11 +18,6 @@
 <img width="450" alt="movie-api-diagram" src="https://user-images.githubusercontent.com/18232987/207712924-6cd5f5b0-f511-455d-a379-7d0d0262f7d8.png">
 
 ## Deployment
-
-### Stack
-* **API** - Spring Boot REST API to demonstrate movie data handling using CRUD functions. The application is contianerised with Docker and can be deployed to Kubernetes.
-* **Data** - Data is stored in MySQL Database
-* **Auth** - Cogni
 
 ### Project Structure
 
