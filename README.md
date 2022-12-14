@@ -5,7 +5,7 @@ Spring Boot REST API to demonstrate movie data handling using CRUD functions. Th
 * **EKS** - Using EKS AWS managed autoscaling EC2 node group and autoscaling Kubernetes deployment to create zero downtime solution
 * **RDS** - Due to budget constraint RDS with MySQL is chosen to permanently store the structured relational movie data, RDS can be configured with backup instance to prevent data loss
 * **S3**  - S3 is used to store the movie updates uploaded by provides
-<img width="450" alt="movie-api-diagram" src="https://user-images.githubusercontent.com/18232987/207712924-6cd5f5b0-f511-455d-a379-7d0d0262f7d8.png">
+<img width="460" alt="movie-api-diagram" src="https://user-images.githubusercontent.com/18232987/207734153-a967f106-8bcd-4946-ba05-95ec1754cdfa.png">
 
 ## Constraints and Improvements
 
