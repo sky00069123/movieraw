@@ -10,7 +10,7 @@ Spring Boot REST API to demonstrate movie data handling using CRUD functions. Th
 ## Constraints and Improvements
 
 * **Response time** - API response time was not extensively tested due to development environment and budget constraint. The response time can be further improved by using better performance database instance, caching and in-memory data, improve network with cloudfront or distribution close to API consumer, rate limiting and API policy to prevent abuse usage.
-* **Secret Manager & Certificate Manager** - Secret Manager and Certificate Manager should be used to store database credentials and any key used for authentication and certificate for endpoints. However, not implemented in this demo.
+* **KMS, Secret Manager & Certificate Manager** - KMS, Secret Manager and Certificate Manager should be used to store database credentials and any key used for encryption and authentication, and certificate for endpoints. However, not implemented in this demo.
 * **API Auth** - AWS Cognito or custom API authntication header and tokens should be use to fine grain authorization of API journey and user access.
 * **API error handling & logging** - Error handling and logging in API source code is not done extensively due to time constraint.
 * **Test cases** - API test cases are not properly developped due to time constraint.
