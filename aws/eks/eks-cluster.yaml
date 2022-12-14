@@ -1,0 +1,29 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: movie-eks-cluster
+  region: eu-west-2
+
+vpc:
+  id: "vpc-0af3c124ba149db3b"
+  cidr: "192.168.0.0/16"
+  subnets:
+    public:
+	    eu-west-2a:
+        id: "subnet-065e4eb2044b9e6b6"
+      eu-west-2b:
+        id: "subnet-07d0f36d0d83e6d84"
+    private:
+      eu-west-2a:
+        id: "subnet-063d10b087e05f994"
+      eu-west-2b:
+        id: "subnet-0b03471692e51c8da"
+
+nodeGroups:
+  - name: movie-eks-public-workers
+    instanceType: t2.micro
+    desiredCapacity: 2
+  - name: movie-eks-private-workers
+    instanceType: t2.micro
+    desiredCapacity: 1
+    privateNetworking: true

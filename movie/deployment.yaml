@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie
+  labels:
+    name: movie
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: movie
+  template:
+    metadata:
+      labels:
+        name: movie
+    spec:
+      containers:
+        - name: movie
+          #image: docker.io/library/movie
+          image: 095182200769.dkr.ecr.eu-west-2.amazonaws.com/movie:0.0.3
+          
+          ports:
+            - containerPort: 8080
+
