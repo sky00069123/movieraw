@@ -22,6 +22,8 @@
 ### Project Structure
 
 ### Deployment Command
+
+'''sh
 mvn package
 java -jar target/movie-0.0.1-SNAPSHOT.jar
 docker build -t movie .
@@ -30,3 +32,5 @@ docker push {ecr_repo}/{image_name}:{tag}
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl port-forward deployment/movie 8080:8080
+'''
+
