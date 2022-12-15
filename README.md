@@ -5,12 +5,12 @@ Spring Boot REST API to demonstrate movie data handling using CRUD functions. Th
 * **EKS** - Using EKS AWS managed autoscaling EC2 node group and autoscaling Kubernetes deployment to create zero downtime solution
 * **RDS** - Due to budget constraint RDS with MySQL is chosen to permanently store the structured relational movie data, RDS can be configured with backup instance to prevent data loss
 * **S3**  - S3 is used to store the movie updates uploaded by provides
-<img width="460" alt="movie-api-diagram" src="https://user-images.githubusercontent.com/18232987/207734153-a967f106-8bcd-4946-ba05-95ec1754cdfa.png">
+<img width="385" alt="movie-api-diagram" src="https://user-images.githubusercontent.com/18232987/207763603-36ae2d22-21b0-4a40-beb6-06894eb31b0e.png">
 
 ## Constraints and Improvements
 
 * **Response time** - API response time was not extensively tested due to development environment and budget constraint. The response time can be further improved by using better performance database instance, caching and in-memory data, improve network with cloudfront or distribution close to API consumer, rate limiting and API policy to prevent abuse usage.
-* **KMS, Secret Manager & Certificate Manager** - KMS, Secret Manager and Certificate Manager should be used to store database credentials and any key used for encryption and authentication, and certificate for endpoints. However, not implemented in this demo.
+* **Encryption & Credentials** - KMS, Secret Manager and Certificate Manager should be used to store database credentials and any key used for encryption and authentication, and certificate for endpoints.
 * **API Auth** - AWS Cognito or custom API authntication header and tokens should be use to fine grain authorization of API journey and user access.
 * **API error handling & logging** - Error handling and logging in API source code is not done extensively due to time constraint.
 * **Test cases** - API test cases are not properly developped due to time constraint.
