@@ -46,10 +46,24 @@ kubectl port-forward deployment/movie 8080:8080
 ```
 
 ## API Solution
+
+### Deployed Solution on AWS is available at
+http://ad51bd7cc7a3f44e6b58a016b3209596-986656804.eu-west-2.elb.amazonaws.com:8080/
+
 ```shell
+# GET /
+# return hello world movie demo
+curl http://localhost:8080/
+
+# GET /health
+# return if API is alive
+curl http://localhost:8080/health
+
 # GET /movie/count
 # return the number of entry in database
 curl http://localhost:8080/movie/count
+# or try with deployed solution on AWS with
+curl http://ad51bd7cc7a3f44e6b58a016b3209596-986656804.eu-west-2.elb.amazonaws.com:8080/movie/count
 
 # GET /movie/{id}
 # query id
